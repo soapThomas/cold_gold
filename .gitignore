@@ -6,3 +6,4 @@ uniprot_sprot.fasta
 uniprot_sprot.fasta.gz
 misc/cdhit-4.6.4/
 .DS_Store
+.idea/
