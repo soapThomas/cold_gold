@@ -1,0 +1,9 @@
+UniProtKB	O33434	soxA		GO:0016491	PMID:10940005	IDA		F	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131101	UniProt
+UniProtKB	O33434	soxA		GO:0016491	PMID:17547421	IDA		F	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131007	UniProt
+UniProtKB	O33434	soxA		GO:0016669	PMID:10940005	IDA		F	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131101	UniProt
+UniProtKB	O33434	soxA		GO:0016669	PMID:17547421	IDA		F	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131007	UniProt
+UniProtKB	O33434	soxA		GO:0018192	PMID:16297640	IDA		P	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131007	UniProt
+UniProtKB	O33434	soxA		GO:0018192	PMID:17547421	IDA		P	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131007	UniProt
+UniProtKB	O33434	soxA		GO:0019417	PMID:10940005	IDA		P	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131101	UniProt
+UniProtKB	O33434	soxA		GO:0055114	PMID:10940005	IDA		P	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131101	UniProt
+UniProtKB	O33434	soxA		GO:0055114	PMID:17547421	IDA		P	SoxAX cytochrome complex subunit A	SOXA_PARPN	protein	NCBITaxon:82367	20131007	UniProt
