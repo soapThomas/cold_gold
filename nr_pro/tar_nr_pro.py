@@ -19,9 +19,18 @@ def parse_fasta_use_bio(file_name):
     return pro_id_list
 
 
+def extract_into_several_files(file_name):
+    """
+    extract uniprot_sprot.fasta every single sequence a file
+    :param file_name:
+    :return:
+    """
+    pass
+
 if __name__ == "__main__":
-    current_dir = os.getcwd()
-    pro_list = parse_fasta_use_bio(current_dir + "\\" + "input_nr\\uniprot_sprot.fasta")
-    for i in pro_list:
-        print i
+    pass
+    # current_dir = os.getcwd()
+    # pro_list = parse_fasta_use_bio(current_dir + "\\" + "input_nr\\uniprot_sprot.fasta")
+    # for i in pro_list:
+    #     print i
 
