@@ -22,7 +22,7 @@ def parse_file_by_ori(file_name):
     """
     do not use pandas parse file
     :param file_name:
-    :return:
+    :return: dictionary   key=protein_name value=GOs
     """
     res_pro_dic = {}
     for line in open(file_name, 'r').readlines():

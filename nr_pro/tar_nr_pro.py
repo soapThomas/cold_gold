@@ -8,7 +8,7 @@ def parse_fasta_use_bio(file_name):
     """
     parse fasta file by BioPython
     :param file_name:
-    :return:
+    :return: a list , where sequence name in it.
     """
     pro_id_list = []
     for seq_record in SeqIO.parse(file_name, "fasta"):

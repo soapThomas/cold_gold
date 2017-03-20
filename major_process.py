@@ -10,16 +10,24 @@ from lib.remote.remoter import *
 if __name__ == "__main__":
     current_dir = os.getcwd()
     print platform.system()
-    # if "Windows" in platform.system():
-    #     bp_txt = "\\annotate_pro\\input_go_files\\bp.txt"
-    #     nr_fas = "\\nr_pro\\input_nr\\uniprot_sprot.fasta"
-    # else:
-    #     bp_txt = "/annotate_pro/input_go_files/bp.txt"
-    #     nr_fas = "/nr_pro/input_nr/uniprot_sprot.fasta"
-    #
-    # # parse_file_by_pandas(current_dir + "\\" + "input_go_files\\bp.txt")
-    # tmp_dic = parse_file_by_ori(current_dir + bp_txt)
-    # pro_list = parse_fasta_use_bio(current_dir + nr_fas)
+
+    if "Windows" in platform.system():
+        bp_txt = "\\annotate_pro\\input_go_files\\bp.txt"
+        nr_fas = "\\nr_pro\\input_nr\\uniprot_sprot.fasta"
+        sample_text = "\\annotate_pro\\input_go_files\\sample.txt"
+        sample_fas = "\\nr_pro\\input_nr\\sample.fasta"
+
+    else:
+        bp_txt = "/annotate_pro/input_go_files/bp.txt"
+        nr_fas = "/nr_pro/input_nr/uniprot_sprot.fasta"
+        sample_text = "/annotate_pro/input_go_files/sample.txt"
+        sample_fas = "/nr_pro/input_nr/sample.fasta"
+
+    # first_part:
+    tmp_dic = parse_file_by_ori(current_dir + sample_text)
+    print tmp_dic
+    pro_list = parse_fasta_use_bio(current_dir + sample_fas)
+    print pro_list
     #
     # count = 0
     # for i in pro_list:
@@ -32,4 +40,4 @@ if __name__ == "__main__":
 
     # second part
     # 10.141.211.65作为跳板机
-    remote_execute()
+    # remote_execute('10.141.211.66', 'root', 'qwdong123', 'mkdir test')
