@@ -1,6 +1,10 @@
 bp.txt
 cc.txt
 mf.txt
+res_bp.txt
+res_cc.txt
+res_mf.txt
+gene_ontology_edit.obo
 *.pyc
 uniprot_sprot.fasta
 uniprot_sprot.fasta.gz
