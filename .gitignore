@@ -6,8 +6,11 @@ res_cc.txt
 res_mf.txt
 gene_ontology_edit.obo
 *.pyc
+nr_60.fasta
+nr_90.fasta
 uniprot_sprot.fasta
 uniprot_sprot.fasta.gz
 misc/cdhit-4.6.4/
+misc/blast-2.2.10/
 .DS_Store
 .idea/

@@ -16,9 +16,9 @@ mf.txt
 uniprot_sprot.fasta 未去重的数据
 
 去重命令：
-cd-hit -i uniprot_sprot.fasta -o nr_90.fasta -c 0.9 -n 5
-cd-hit -i nr_90.fasta -o nr_60.fasta -c 0.6 -n 4
-./psi-cd-hit.pl -i ../nr_60.fasts -o nr_30.fasta -c 0.3
+./cd-hit -i uniprot_sprot.fasta -o nr_90.fasta -c 0.9 -n 5 -T 8
+./cd-hit -i nr_90.fasta -o nr_60.fasta -c 0.6 -n 4 -T 8
+./psi-cd-hit/psi-cd-hit.pl -i nr_60.fasta -o nr_30.fasta -c 0.3 -core 8
 *+++++++++++++++++++++++++*
 
 
@@ -28,3 +28,17 @@ cd-hit -i nr_90.fasta -o nr_60.fasta -c 0.6 -n 4
 10.141.211.66 上存放着ioncom /mnt目录下
 10.141.211.69 上存放着cd-hit 百分之30去重之后的结果
 *··························*
+
+
+*=====================================*
+cd-hit使用方法:
+yum install gcc-c++
+make  //  make openmp=no
+cd cd-hit-auxtools
+make
+
+blast环境变量:
+方法一：export PATH=$PATH:/usr/local/webserver/php/bin
+方法二：vi ~/.bash_profile修改文件中PATH一行
+方法三：修改/etc/profile文件使其永久性生效
+*=====================================*
