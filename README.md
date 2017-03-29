@@ -50,3 +50,6 @@ blast环境变量:
 写脚本 把fasta文件分成若干个文件。
 Nwalign调通跑起来。
 -&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-
+
+scp:
+scp nr_30.fasta root@10.141.211.64:/home/thomas/HHBLITS/hhsuite-3.0.1-Linux/scripts
