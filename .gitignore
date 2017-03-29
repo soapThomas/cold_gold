@@ -6,6 +6,7 @@ res_cc.txt
 res_mf.txt
 gene_ontology_edit.obo
 *.pyc
+nr_30.fasta
 nr_60.fasta
 nr_90.fasta
 uniprot_sprot.fasta
