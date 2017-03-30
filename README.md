@@ -53,3 +53,5 @@ Nwalign调通跑起来。
 
 scp:
 scp nr_30.fasta root@10.141.211.64:/home/thomas/HHBLITS/hhsuite-3.0.1-Linux/scripts
+
+nohup ./NWalign sample1.fasta sample2.fasta > log.txt &
