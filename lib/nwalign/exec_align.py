@@ -15,5 +15,21 @@ def exec_align(fasta_A, fasta_B, result_file):
 
     return cmd
 
+
 def split_task():
-    
+    pass
+
+
+def fetch_result(file_name):
+    """
+    :param file_name
+    :return:
+    """
+    for line in open(file_name, 'r').readlines():
+        if line.startswith("Sequece identity"):
+            single_line_list = line.strip('\n').split(' ')
+            identity = single_line_list[1].split('=')
+    return identity
+
+if __name__ == "__main__":
+    fetch_result("sample_1_2.txt")
