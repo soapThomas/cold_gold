@@ -26,10 +26,10 @@ def fetch_result(file_name):
     :return:
     """
     for line in open(file_name, 'r').readlines():
-        if line.startswith("Sequece identity"):
+        if line.startswith("Sequence identity"):
             single_line_list = line.strip('\n').split(' ')
             identity = single_line_list[1].split('=')
-    return identity
+    return identity[1]
 
 if __name__ == "__main__":
-    fetch_result("sample_1_2.txt")
+    print fetch_result("sample_1_2.txt")
