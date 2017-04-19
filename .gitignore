@@ -9,6 +9,7 @@ gene_ontology_edit.obo
 nr_30.fasta
 nr_60.fasta
 nr_90.fasta
+data_30.fasta
 uniprot_sprot.fasta
 uniprot_sprot.fasta.gz
 misc/cdhit-4.6.4/
