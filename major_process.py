@@ -2,8 +2,10 @@
 
 # import os
 import platform
+import datetime
 from annotate_pro.parse_go_file import *
 from nr_pro.tar_nr_pro import *
+from lib.nwalign.exec_align import *
 from lib.remote.remoter import *
 
 
@@ -31,15 +33,40 @@ if __name__ == "__main__":
     # print pro_list
     #
 
-    count = 0
-    for i in pro_list:
-        if i in tmp_dic.keys():
-            print i
-            count += 1
+    starttime = datetime.datetime.now()
+    # count = 0
+    # for i in pro_list:
+    #     if i in tmp_dic.keys():
+    #         # print i
+    #         count += 1
+    #         # print i
+    # print count          # 2457
+    # print len(tmp_dic)   # 15960
+    # print len(pro_list)  # 55321
+    # endtime = datetime.datetime.now()
+    # print (endtime - starttime).seconds
+
+    qualify_pro = []
+    count_2 = 0
+    for i in tmp_dic.keys():
+        if i in pro_list:
             # print i
-    print count          # 2457
-    print len(tmp_dic)   # 15960
-    print len(pro_list)  # 55321
+            qualify_pro.append(i)
+            count_2 += 1
+    print count_2
+
+    endtime_2 = datetime.datetime.now()
+    print (endtime_2 - starttime).seconds
+
+    # qualify_pro = []
+    print qualify_pro
+    split_task(qualify_pro)
+    # for i in qualify_pro:
+
+
+
+
+
 
     # second part
     # 10.141.211.65作为跳板机

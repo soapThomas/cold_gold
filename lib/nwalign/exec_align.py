@@ -1,6 +1,6 @@
 # coding utf-8
 
-import os, sys, time
+import os
 from lib.remote.remoter import *
 
 
@@ -60,17 +60,19 @@ def exec_align(fasta_A, fasta_B, result_file):
     return cmd
 
 
-def split_task():
+def split_task(proteins):
     """
 
+    :param proteins:
     :return:
     """
     file_path = LOCAL_FASTA_PATH + "test"
     # print file_path
     for parent, dirnames, filenames in os.walk(file_path):
-        print filenames
-
-
+        for filename in filenames:
+            if filename in proteins:
+                cp_cmd = 'cp {0} ../'
+                os.system(cp_cmd)
 
 
 def fetch_result(file_name):
@@ -85,9 +87,10 @@ def fetch_result(file_name):
     return identity[1]
 
 if __name__ == "__main__":
+    pass
     # print fetch_result("sample_1_2.txt")
     # print PathController.get_root_path()
-    split_task()
+    # split_task()
     # for i in IP_LIST:
     #     deploy_nwalign(i)
     #     deploy_fasta(i)
