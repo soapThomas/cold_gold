@@ -60,19 +60,29 @@ def exec_align(fasta_A, fasta_B, result_file):
     return cmd
 
 
-def split_task(proteins):
+def split_task(proteins, category):
     """
 
     :param proteins:
     :return:
     """
-    file_path = LOCAL_FASTA_PATH + "test"
+    file_path = LOCAL_FASTA_PATH + "output"  #out_put里存放55321条30%去重后的数据
+
+    mkdir_cmd = "mkdir -p {0}".format(LOCAL_FASTA_PATH + category + "/")
+    os.system(mkdir_cmd)
     # print file_path
     for parent, dirnames, filenames in os.walk(file_path):
         for filename in filenames:
-            if filename in proteins:
-                cp_cmd = 'cp {0} ../'
+            filename_list = filename.split("_")
+            pro_name = filename_list[1]
+            if pro_name in proteins:
+                cp_cmd = 'cp {0} ../{1}'.format(file_path+'/'+filename, category)
+                # print cp_cmd
                 os.system(cp_cmd)
+
+    tar_cmd = 'tar -cvf {0} {1}'.format(LOCAL_FASTA_PATH + category + ".tar.gz", LOCAL_FASTA_PATH + category + "/")
+    os.system(tar_cmd)
+
 
 
 def fetch_result(file_name):

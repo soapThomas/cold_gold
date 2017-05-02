@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     # qualify_pro = []
     print qualify_pro
-    split_task(qualify_pro)
+    split_task(qualify_pro, "bp")
     # for i in qualify_pro:
 
 
