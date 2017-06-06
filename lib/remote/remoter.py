@@ -3,13 +3,24 @@
 import paramiko
 
 
+# 凡是接受返回值(read or readlines 一定是按顺序执行完了才往下)
 def remote_execute(remote_ip, user, passwd, cmd):
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     ssh.connect(remote_ip, 22, user, passwd)
     print "{0} run command :".format(remote_ip), cmd
     stdin, stdout, stderr = ssh.exec_command(cmd)
-    stdout.read()
+    print "stdout.readlines:", stdout.readlines()
+    ssh.close()
+
+
+def remote_execute_none_read(remote_ip, user, passwd, cmd):
+    ssh = paramiko.SSHClient()
+    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    ssh.connect(remote_ip, 22, user, passwd)
+    print "{0} run command :".format(remote_ip), cmd
+    ssh.exec_command(cmd)
+    # stdout.read()
     ssh.close()
 
 

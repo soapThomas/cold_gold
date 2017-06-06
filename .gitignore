@@ -14,5 +14,6 @@ uniprot_sprot.fasta
 uniprot_sprot.fasta.gz
 misc/cdhit-4.6.4/
 misc/blast-2.2.10/
+misc/.DS_Store
 .DS_Store
 .idea/

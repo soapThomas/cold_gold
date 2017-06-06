@@ -59,11 +59,27 @@ if __name__ == "__main__":
     print (endtime_2 - starttime).seconds
 
     # qualify_pro = []
-    print qualify_pro
+    # print qualify_pro
     split_task(qualify_pro, "bp")
     # for i in qualify_pro:
 
+    for i in IP_LIST:
+        deploy_nwalign(i)
+        deploy_fasta(i, "bp.tar.gz")
 
+    # time.sleep(1)
+
+    for i in IP_LIST:
+        tar_fasta(i, "bp.tar.gz")
+        deploy_sh(i, SPLIT_FILE_NAME)
+        deploy_sh(i, EXEC_FILE_NAME)
+
+    for i in range(len(IP_LIST)):
+        pre_exec_align(IP_LIST[i], count_2, i, len(IP_LIST))
+
+    for i in IP_LIST:
+        exec_align(i, "data", "bp")
+        print "{0} exec has been done".format(i)
 
 
 
